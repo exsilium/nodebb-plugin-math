@@ -14,9 +14,13 @@ Make sure the nodebb-plugin-markdown feature `Automatically detect and highlight
 
 Write a valid math block within a post as a code block:
 
-\`\`\`math
-f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi
+\`\`\`math  
+f(x) = \int_{-\infty}^\infty\hat f(\xi)\,e^{2 \pi i \xi x}\,d\xi  
 \`\`\`
+
+For inline math formulas wrap your function with `\\(\\)`, e.g.:
+
+\\\\(f(x)\\\\)
 
 ## Contributions
 
