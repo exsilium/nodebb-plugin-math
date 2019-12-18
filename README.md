@@ -1,3 +1,5 @@
+![NodeBB Compatibility](https://packages.nodebb.org/api/v1/plugins/nodebb-plugin-math/compatibility.png)
+
 # NodeBB Math parser
 
 A plugin to parse math codeblocks and render them currently with [KaTeX](https://github.com/KaTeX/KaTeX).
