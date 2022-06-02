@@ -1,5 +1,5 @@
 /* globals define, socket, app, $ */
-define('admin/plugins/math', ['settings'], function(Settings) {
+define('admin/plugins/math', ['settings', 'alerts'], function(Settings, alerts) {
   'use strict';
 
   var ACP = {};
@@ -9,7 +9,7 @@ define('admin/plugins/math', ['settings'], function(Settings) {
 
     $('#save').on('click', function() {
       Settings.save('math', $('.math-settings'), function() {
-        app.alert({
+        alerts.alert({
           type: 'success',
           alert_id: 'math-saved',
           title: 'Settings Saved',

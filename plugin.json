@@ -1,31 +1,32 @@
 {
-    "id": "nodebb-plugin-math",
-    "name": "Math Parser",
-    "description": "Math in NodeBB",
-    "url": "https://github.com/exsilum/nodebb-plugin-math",
-    "library": "./lib/index.js",
-    "less": [
-        "public/styles/main.less"
-    ],
-    "scripts": [
-        "public/js/math.js",
-        "public/js/math-auto-render.js",
-        "public/js/client.js",
-        "public/js/debug.js"
-    ],
-    "acpScripts": [
-        "public/js/admin.js"
-    ],
-    "templates": "./public/templates",
-    "staticDirs": {
-        "fonts": "public/fonts"
-    },
-    "hooks": [
-        { "hook": "static:app.load", "method": "onLoad" },
-        { "hook": "filter:parse.post", "method": "parsePost" },
-        { "hook": "filter:parse.raw", "method": "parseRaw"},
-        { "hook": "filter:admin.header.build", "method": "admin.menu" },
-        { "hook": "filter:composer.formatting", "method": "registerFormatting", "priority": 9 },
-        { "hook": "filter:config.get", "method": "getConfig" }
-    ]
+  "id": "nodebb-plugin-math",
+  "name": "Math Parser",
+  "description": "Math in NodeBB",
+  "url": "https://github.com/exsilum/nodebb-plugin-math",
+  "library": "./lib/index.js",
+  "less": [
+    "public/styles/main.less"
+  ],
+  "scripts": [
+    "public/js/client.js",
+    "public/js/debug.js"
+  ],
+  "modules": {
+    "katex.js": "node_modules/katex/dist/katex.js",
+    "auto-render.js": "node_modules/katex/dist/contrib/auto-render.js",
+    "../admin/plugins/math.js": "public/js/admin.js"
+  },
+  "settingsRoute": "/admin/plugins/math",
+  "templates": "./public/templates",
+  "staticDirs": {
+    "fonts": "./node_modules/katex/dist/fonts"
+  },
+  "hooks": [
+    { "hook": "static:app.load", "method": "onLoad" },
+    { "hook": "filter:parse.post", "method": "parsePost" },
+    { "hook": "filter:parse.raw", "method": "parseRaw"},
+    { "hook": "filter:admin.header.build", "method": "admin.menu" },
+    { "hook": "filter:composer.formatting", "method": "registerFormatting", "priority": 9 },
+    { "hook": "filter:config.get", "method": "getConfig" }
+  ]
 }

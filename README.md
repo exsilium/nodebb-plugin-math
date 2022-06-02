@@ -1,10 +1,8 @@
-![NodeBB Compatibility](https://packages.nodebb.org/api/v1/plugins/nodebb-plugin-math/compatibility.png)
-
 # NodeBB Math parser
 
 A plugin to parse math codeblocks and render them currently with [KaTeX](https://github.com/KaTeX/KaTeX).
 
-Packaged KaTeX version: `v0.11.1`
+Packaged KaTeX version: `^0.15.6`
 
 ## Installation 
 

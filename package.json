@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-math",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parse math inside NodeBB",
   "main": "./lib/index.js",
   "repository": {
@@ -20,13 +20,12 @@
   },
   "homepage": "https://github.com/exsilium/nodebb-plugin-math",
   "dependencies": {
-    "nodebb-plugin-markdown": "^7.1.0",
-    "winston": "~3.2.1"
+    "katex": "^0.15.6"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">= 12.22.1"
   },
   "nbbpm": {
-    "compatibility": "^1.4.0"
+    "compatibility": "^2.0.0"
   }
 }

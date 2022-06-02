@@ -1,6 +1,6 @@
 "use strict";
-
-/* global document $ config renderMathInElement */
+import renderMathInElement from 'auto-render'
+/* global document $ config */
 
 $(document).ready(function() {
   // Add the $ composer button
