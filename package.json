@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/exsilium/nodebb-plugin-math",
   "dependencies": {
-    "katex": "^0.15.6"
+    "katex": "^0.16.10"
   },
   "engines": {
     "node": ">= 12.22.1"
